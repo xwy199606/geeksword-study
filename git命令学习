@@ -1,0 +1,23 @@
+初始化一个Git仓库，使用git init命令。
+1.使用命令git add <file>，注意，可反复多次使用，添加多个文件；
+
+2.使用命令git commit -m <message>，完成提交。
+
+3.要随时掌握工作区的状态，使用git status命令。
+
+4.如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
+
+5.git log 查看版本记录 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
+
+6.首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交1094adb...（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。现在，我们要把当前版本append GPL回退到上一个版本add distributed，就
+可以使用git reset命令：$ git reset --hard HEAD^   HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。使用 git reflog 查看命令历史（commit_id号）
+
+7.将计算机连接到GitHub仓库：git remote add origin https://github.com/geeksword/geeksword-framework.git
+
+8. git pull 命令的作用是：取回远程主机某个分支的更新，再与本地的指定分支合并.git pull = git fetch +git merge
+      git pull <远程主机名> <远程分支名>:<本地分支名>
+例：git pull origin master:brantest = git fetch origin master:brantest ((从远程的origin仓库的master分支下载代码到本地的origin brantest) + git merge brantest 
+ 
+9 .git push 命令用于将本地分支的更新，推送到远程主机。它的格式与git pull命令相仿。
+
+10.查看连接的远程仓库 git remote -v 
