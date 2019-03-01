@@ -14,6 +14,6 @@ $ pull A master
 3、添加文件 git add -file 
 4、提交并附上描述 git commit -m "discribion"
 5、推送到远程仓库 git push origin master
-6、添加一个远程仓库并命名为 zls git remote add zls https://github.com/zls/datura-lj/git-fork-demo.git 
+6、添加一个远程仓库并命名为 zls: git remote add zls https://github.com/zls/datura-lj/git-fork-demo.git 
 7、查看所连接的远程 git remote -v
 8、拉取并合并中心仓库最新代码 git pull upstream xwy 推送到中心仓库：git push upstream xwy
